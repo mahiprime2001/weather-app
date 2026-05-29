@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>weather-app</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>⛅ weather</h1>
+      <p class="subtitle">Live conditions &amp; forecast — powered by Open-Meteo</p>
+    </header>
+
+    <form id="search-form" class="search">
+      <input type="text" id="city" placeholder="Enter a city…" autocomplete="off" required />
+      <select id="days" title="Forecast days">
+        <option value="3">3 days</option>
+        <option value="5" selected>5 days</option>
+        <option value="7">7 days</option>
+        <option value="10">10 days</option>
+      </select>
+      <button type="submit">Search</button>
+    </form>
+
+    <p id="status" class="status" hidden></p>
+
+    <section id="current" class="current card" hidden></section>
+    <section id="forecast" class="forecast" hidden></section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
